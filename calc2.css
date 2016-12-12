@@ -1,0 +1,17 @@
+.screen{
+width: 200px;
+height: 30px;
+margin-left: 10px;
+
+  width: 180px;
+  margin-bottom:0;
+  background-color:white;
+  color:black;
+  position:relative;
+  top: 10px;
+  
+}
+
+button:focus{
+	outline:none;
+	}
