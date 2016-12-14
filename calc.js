@@ -10,7 +10,7 @@ $(function() {
 
 
     //starting with a clear screen and binding the clear button.
-<<<<<<< HEAD
+
     $('.screen').text("");
 
     function add(M,C){
@@ -53,17 +53,16 @@ $(function() {
         operator = "";
 
 
-=======
+
     $('.screen').text('');
 
     $('#clear').on('click', function() {
         $('.screen').text('');
->>>>>>> 6789d7fa2ef6bd1d070e4cbe65fc8831a53d7ea0
     });
 
 
     $('#1').on('click', function() {
-<<<<<<< HEAD
+
         var num = 1;
 
         addToScreen(num);
@@ -107,12 +106,12 @@ $(function() {
     $('#7').on('click', function() {
         var num = 7;
         addToScreen(num);
-=======
+
      var num = 1;
         $('.screen').append(document.createTextNode(num));
 
     });
-	
+
 	$('#2').on('click', function() {
      var num = 2;
         $('.screen').append(document.createTextNode(num));
@@ -132,7 +131,7 @@ $(function() {
 
 
     });
-	
+
 	$('#5').on('click', function() {
      var num = 5;
         $('.screen').append(document.createTextNode(num));
@@ -159,8 +158,7 @@ $(function() {
         $('.screen').append(document.createTextNode(num));
 
 
-    });
->>>>>>> 6789d7fa2ef6bd1d070e4cbe65fc8831a53d7ea0
+});
 
 	$('#9').on('click', function() {
      var num = 9;
