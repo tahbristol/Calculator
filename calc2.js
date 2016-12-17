@@ -1,9 +1,9 @@
 $(document).ready(function() {
     /*=== Variables === */
     var current = "";
-    var memory = "";
+
     var result = "";
-    var operator = "";
+
 
 
     /*=== Number Buttons ===*/
@@ -12,7 +12,7 @@ $(document).ready(function() {
 
         current += $(this).text();
         $('.screen').text(current);
-        console.log(current);
+
     });
 
     $('#2').on('click', function() {
@@ -78,7 +78,7 @@ $(document).ready(function() {
     });
 
 
-    $('#0').on('click', function() {
+    $('#zero').on('click', function() {
 
         current += $(this).text();
         $('.screen').text(current);
@@ -91,37 +91,26 @@ $(document).ready(function() {
     $('#clear').on('click', function() {
         $('.screen').text("");
         current = "";
-        memory = "";
-        operator = "";
+
     });
 
 
     $('#delete').on('click', function() {
         $('.screen').text("");
-        current = "";
+
+
     });
 
 
     /* === Equals === */
     $('#equals').on('click', function() {
-        if (operator === "+") {
-            current = parseInt(current);
-            memory = parseInt(memory);
-            result = memory + current;
-            result = result.toString();
-            $('.screen').text(result);
-            memory = result;
-            console.log("mem after result" + memory);
-            current = "";
-            operator = "";
-            //result = "";
 
-            console.log("Memo" + memory);
-            console.log("result" + result);
-            console.log("curr" + current);
-            console.log("oper" + operator);
+        //evaluate expression on screen and set the result to the current screen entry
+        var entry = current;
+        result = eval(entry);
+        $('.screen').text(result);
+        current = result;
 
-        }
 
     });
 
@@ -137,23 +126,29 @@ $(document).ready(function() {
     /* === Operator Events ===*/
 
     $('#add').on('click', function() {
-        console.log("curr b4 reset" + current);
-        if (memory === "") {
-            memory = current;
-        } else {
-            memory = memory;
-            result = "";
-        }
-        operator = "+";
-        current = "";
-        $('.screen').text(operator);
 
-        console.log("Memo" + memory);
-        console.log("result" + result);
-        console.log("curr" + current);
-        console.log("oper" + operator);
-    })
+        current += $(this).text();
+        $('.screen').text(current);
+    });
 
+    $('#subtract').on('click', function() {
+
+        current += $(this).text();
+        $('.screen').text(current);
+
+
+
+    });
+
+    $('#multiply').on('click', function() {
+        current += "*"
+        $('.screen').text(current);
+    });
+
+    $('#divide').on('click', function() {
+        current += $(this).text();
+        $('.screen').text(current);
+    });
 
 
 
