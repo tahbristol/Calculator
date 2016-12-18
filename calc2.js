@@ -96,7 +96,14 @@ $(document).ready(function() {
 
 
     $('#delete').on('click', function() {
-        $('.screen').text("");
+
+        if (current !== undefined || current !== "") {
+            var screenLength = current.length;
+            current = current.slice(0, screenLength - 1)
+            $('.screen').text(current);
+            console.log(current);
+        }
+
 
 
     });
@@ -154,4 +161,4 @@ $(document).ready(function() {
 
 
 
-});
+});;;;
